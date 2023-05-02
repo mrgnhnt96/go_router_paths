@@ -171,13 +171,9 @@ abstract class Base<T extends Base<dynamic>> with Query<T> {
     final path = _path;
     if (path == null) {
       final param = _param;
-      if (param == null) {
-        throw ArgumentError(
-          'Param cannot be null when path is null',
-        );
-      }
+      assert(param != null, 'Param cannot be null when path is null');
 
-      if (!RegExp(r'^\w+$').hasMatch(param)) {
+      if (!RegExp(r'^\w+$').hasMatch(param!)) {
         throw ArgumentError(
           'Param must be alphanumeric and cannot contain special characters',
         );
