@@ -1,7 +1,9 @@
 name: go_router_paths
-description: A Very Good Project created by Very Good CLI.
-version: 0.1.0+1
-publish_to: none
+description: Helps define paths for `go_router` and other navigation packages. Remove those hard coded strings!
+version: 0.1.0
+repository: https://github.com/mrgnhnt96/go_router_paths
+homepage: https://github.com/mrgnhnt96/go_router_paths
+issue_tracker: https://github.com/mrgnhnt96/go_router_paths/issues
 
 environment:
   sdk: ">=2.18.0 <3.0.0"
