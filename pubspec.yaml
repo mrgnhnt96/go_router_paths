@@ -1,6 +1,6 @@
 name: go_router_paths
 description: Helps define paths for `go_router` and other navigation packages. Remove those hard coded strings!
-version: 0.1.0
+version: 0.1.1
 repository: https://github.com/mrgnhnt96/go_router_paths
 homepage: https://github.com/mrgnhnt96/go_router_paths
 issue_tracker: https://github.com/mrgnhnt96/go_router_paths/issues
