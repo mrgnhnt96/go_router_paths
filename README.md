@@ -120,8 +120,6 @@ final routes = GoRouter(
 
 ### Navigate to your paths
 
-Go router is used in this example, but is not required.
-
 ```dart
 AppPaths.home.path // '/home'
 AppPaths.welcome.login.path // '/welcome/login'
@@ -133,11 +131,9 @@ AppPaths.users.user.define('Darth Vader').delete.path // '/users/Darth Vader/del
 AppPaths.books.define('Star Wars').query({'first-trilogy-only': 'true'}).path // '/books/Star Wars?first-trilogy-only=true'
 ```
 
-## Note
+## Encoding
 
-### Encoding
-
-Calling the `path` member on a `Path` or `Param` will return the path as an encoded string automatically, including all params and queries.
+All params and query params (keys and values) are encoded using `Uri.encodeComponent`.
 
 [go_router]: https://pub.dev/packages/go_router
 [license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
