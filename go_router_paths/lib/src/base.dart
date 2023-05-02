@@ -3,7 +3,7 @@ part of 'go_router_paths.dart';
 /// {@template base}
 /// The base class for all route paths
 /// {@endtemplate}
-abstract class Base<T> with Query<T> {
+abstract class Base<T extends Base<dynamic>> with Query<T> {
   /// {@macro base}
   const Base({
     required String? path,
