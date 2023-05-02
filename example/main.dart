@@ -6,7 +6,7 @@ class AppPaths {
   static WelcomePath get welcome => WelcomePath();
 
   static UsersPath get users => UsersPath();
-  static Param get books => Param('books', 'bookId');
+  static Param<Param> get books => Param('books', 'bookId');
 }
 
 class WelcomePath extends Path<WelcomePath> {
