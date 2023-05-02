@@ -1,5 +1,10 @@
 # Go Router Paths
 
+[![codecov](https://codecov.io/gh/mrgnhnt96/go_router_paths/branch/master/graph/badge.svg?token=ZZ4CR3E6HU)](https://codecov.io/gh/mrgnhnt96/go_router_paths)
+[![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
+[![License: MIT][license_badge]][license_link]
+<a href="https://github.com/tenhobi/effective_dart"><img src="https://img.shields.io/badge/style-effective_dart-40c4ff.svg" alt="style: effective dart"></a>
+
 ## Overview
 
 This package is intended to support, but not limited to, [go_router][go_router].
@@ -135,3 +140,7 @@ AppPaths.books.define('Star Wars').query({'first-trilogy-only': 'true'}).path //
 Calling the `path` member on a `Path` or `Param` will return the path as an encoded string automatically, including all params and queries.
 
 [go_router]: https://pub.dev/packages/go_router
+[license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
+[license_link]: https://opensource.org/licenses/MIT
+[very_good_analysis_badge]: https://img.shields.io/badge/style-very_good_analysis-B22C89.svg
+[very_good_analysis_link]: https://pub.dev/packages/very_good_analysis
