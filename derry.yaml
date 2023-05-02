@@ -1,0 +1,24 @@
+tests:
+  - rm -rf coverage
+  - dart run test --coverage coverage -r expanded --test-randomize-ordering-seed random --timeout 60s
+  - $coverage
+
+coverage:
+  upload:
+    - val=$(cat .codecov_secret); ./codecov -t $val
+  build:
+    - format_coverage --lcov --in=coverage --out=coverage/lcov.info --report-on=lib
+    - genhtml coverage/lcov.info -o coverage
+    - open coverage/index.html
+    - curl -Os https://uploader.codecov.io/latest/macos/codecov
+    - chmod +x codecov
+
+prep:
+  - flutter clean
+  - dart pub upgrade
+  - dart analyze lib test
+  - dart format lib test
+  - dart pub global run import_sorter:main --no-comments
+
+publish:
+  - sh ./publish_package.sh
