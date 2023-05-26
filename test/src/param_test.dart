@@ -1,7 +1,8 @@
 // ignore_for_file: inference_failure_on_instance_creation
 
-import 'package:go_router_paths/src/go_router_paths.dart';
 import 'package:test/test.dart';
+
+import 'package:go_router_paths/src/go_router_paths.dart';
 
 void main() {
   group('goRoute', () {
