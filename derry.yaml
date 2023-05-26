@@ -1,7 +1,7 @@
 tests:
   - rm -rf coverage
   - dart run test --coverage coverage -r expanded --test-randomize-ordering-seed random --timeout 60s
-  - $coverage
+  - $coverage:build
 
 coverage:
   upload:
