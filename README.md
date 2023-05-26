@@ -57,29 +57,29 @@ Go router is used in this example, but is not required.
 final routes = GoRouter(
   routes: [
     GoRoute(
-      path: AppPaths.home.goRoute,
+      path: AppPaths.home.goRoute, // '/home'
       pageBuilder: (context, state) => const HomePage(),
     ),
     GoRoute(
-      path: AppPaths.welcome.goRoute,
+      path: AppPaths.welcome.goRoute, // '/welcome'
       pageBuilder: (context, state) => const WelcomePage(),
       routes: [
         GoRoute(
-          path: AppPaths.welcome.login.goRoute,
+          path: AppPaths.welcome.login.goRoute, // 'login'
           pageBuilder: (context, state) => const LoginPage(),
         ),
         GoRoute(
-          path: AppPaths.welcome.register.goRoute,
+          path: AppPaths.welcome.register.goRoute, // 'register'
           pageBuilder: (context, state) => const RegisterPage(),
         ),
       ],
     ),
     GoRoute(
-      path: AppPaths.users.goRoute,
+      path: AppPaths.users.goRoute, // '/users'
       pageBuilder: (context, state) => const UsersPage(),
       routes: [
         GoRoute(
-          path: AppPaths.users.user.goRoute,
+          path: AppPaths.users.user.goRoute, // ':userId'
           pageBuilder: (context, state) {
             final userId = state.params[AppPaths.users.user.id]!;
 
@@ -87,7 +87,7 @@ final routes = GoRouter(
           },
           routes: [
             GoRoute(
-              path: AppPaths.users.user.edit.goRoute,
+              path: AppPaths.users.user.edit.goRoute, // 'edit'
               pageBuilder: (context, state) {
                 final userId = state.params[AppPaths.users.user.id]!;
 
@@ -95,7 +95,7 @@ final routes = GoRouter(
               },
             ),
             GoRoute(
-              path: AppPaths.users.user.delete.goRoute,
+              path: AppPaths.users.user.delete.goRoute, // 'delete'
               pageBuilder: (context, state) {
                 final userId = state.params[AppPaths.users.user.id]!;
 
@@ -107,7 +107,7 @@ final routes = GoRouter(
       ],
     ),
     GoRoute(
-      path: AppPaths.books.goRoute,
+      path: AppPaths.books.goRoute, // '/books/:bookId'
       pageBuilder: (context, state) {
         final bookId = state.params[AppPaths.books.id]!;
 
