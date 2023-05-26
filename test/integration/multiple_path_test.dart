@@ -1,13 +1,13 @@
 // ignore_for_file: strict_raw_type
 
-import 'package:test/test.dart';
-
 import 'package:go_router_paths/src/go_router_paths.dart';
+import 'package:test/test.dart';
 
 class MultiplePath extends Path<MultiplePath> {
   MultiplePath() : super('home');
 
   All get all => All(parent: this);
+  Param get some => Param('some', 'someId', parent: this);
 }
 
 class All extends Path<All> {
@@ -35,6 +35,7 @@ void main() {
     final paths = MultiplePath();
 
     expect(paths.goRoute, '/home');
+    expect(paths.some.goRoute, 'some/:someId');
     expect(paths.all.goRoute, 'all');
     expect(paths.all.one.goRoute, ':oneId');
 

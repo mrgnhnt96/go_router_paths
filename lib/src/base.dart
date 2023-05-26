@@ -185,10 +185,16 @@ abstract class Base<T extends Base<dynamic>> with Query<T> {
     final cleanPath = _clean(path);
 
     final parent = _parent;
+    var start = '/';
     if (parent != null && parent._segments.isNotEmpty) {
-      return cleanPath;
+      start = '';
     }
 
-    return '/$cleanPath';
+    var param = '';
+    if (_param != null) {
+      param = '/:$_param';
+    }
+
+    return '$start$cleanPath$param';
   }
 }

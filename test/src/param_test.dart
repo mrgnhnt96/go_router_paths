@@ -1,18 +1,17 @@
 // ignore_for_file: inference_failure_on_instance_creation
 
-import 'package:test/test.dart';
-
 import 'package:go_router_paths/src/go_router_paths.dart';
+import 'package:test/test.dart';
 
 void main() {
   group('goRoute', () {
     test(' "path/:id" from "path/:id"', () {
-      expect(Param('path/:id', 'id').goRoute, '/path/:id');
+      expect(Param('path', 'id').goRoute, '/path/:id');
     });
 
     test(' "path/:id" from "path/:id" with parent "some"', () {
       expect(
-        Param('path/:id', 'id', parent: Path('some')).goRoute,
+        Param('path', 'id', parent: Path('some')).goRoute,
         'path/:id',
       );
     });
