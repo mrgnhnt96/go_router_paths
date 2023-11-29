@@ -7,7 +7,9 @@ coverage:
   upload:
     - val=$(cat .codecov_secret); ./codecov -t $val
   build:
+    # dart pub global activate coverage
     - format_coverage --lcov --in=coverage --out=coverage/lcov.info --report-on=lib
+    # brew install lcov
     - genhtml coverage/lcov.info -o coverage
     - open coverage/index.html
     - curl -Os https://uploader.codecov.io/latest/macos/codecov
