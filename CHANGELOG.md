@@ -1,3 +1,7 @@
+# 0.2.1 | 11.29.2023
+
+- Update dependencies
+
 # 0.2.0 | 5.26.2023
 
 - Fix bug where the param id was not included in goRoute path
