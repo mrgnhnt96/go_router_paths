@@ -1,8 +1,7 @@
 // ignore_for_file: strict_raw_type
 
-import 'package:test/test.dart';
-
 import 'package:go_router_paths/src/go_router_paths.dart';
+import 'package:test/test.dart';
 
 class MultiplePath extends Path<MultiplePath> {
   MultiplePath() : super('home');
