@@ -9,3 +9,4 @@ pubspec.lock
 codecov
 .history
 coverage/**
+.lh

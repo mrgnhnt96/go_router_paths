@@ -41,8 +41,8 @@ void main() {
       '/users/Luke%20Skywalker',
     );
     expect(
-      AppPaths.users.user.define('Jar Jar Banks').edit.path,
-      '/users/Jar%20Jar%20Banks/edit',
+      AppPaths.users.user.define('Jar Jar binks').edit.path,
+      '/users/Jar%20Jar%20binks/edit',
     );
     expect(
       AppPaths.users.user.define('Darth Vader').delete.path,

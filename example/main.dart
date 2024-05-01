@@ -101,9 +101,9 @@ void main() {
   AppPaths.users.path; // '/users'
   AppPaths.users.user.define('Luke Skywalker').path; // '/users/Luke Skywalker'
   AppPaths.users.user
-      .define('Jar Jar Banks')
+      .define('Jar Jar binks')
       .edit
-      .path; // '/users/Jar Jar Banks/edit'
+      .path; // '/users/Jar Jar binks/edit'
   AppPaths.users.user
       .define('Darth Vader')
       .delete

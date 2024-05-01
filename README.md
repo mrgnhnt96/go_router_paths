@@ -126,7 +126,7 @@ AppPaths.welcome.login.path // '/welcome/login'
 AppPaths.welcome.register.path // '/welcome/register'
 AppPaths.users.path // '/users'
 AppPaths.users.user.define('Luke Skywalker').path // '/users/Luke%20Skywalker'
-AppPaths.users.user.define('Jar Jar Banks').edit.path // '/users/Jar%20Jar%20Banks/edit'
+AppPaths.users.user.define('Jar Jar binks').edit.path // '/users/Jar%20Jar%20binks/edit'
 AppPaths.users.user.define('Darth Vader').delete.path // '/users/Darth%20Vader/delete'
 AppPaths.books.define('Star Wars').query({'first-trilogy-only': 'true'}).path // '/books/Star%20Wars?first-trilogy-only=true'
 ```
