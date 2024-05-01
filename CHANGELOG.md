@@ -1,3 +1,7 @@
+# 0.2.2 | 5.1.2024
+
+- Update README
+
 # 0.2.1 | 11.29.2023
 
 - Update dependencies
