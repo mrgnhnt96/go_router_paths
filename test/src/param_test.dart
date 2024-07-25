@@ -29,6 +29,12 @@ void main() {
       expect(Param('path', 'id').define('hello').path, '/path/hello');
     });
 
+    test(' "path/hello/person" from "path/:id/:name"', () {
+      final path = _NestedPath().define('hello').name.define('person').path;
+
+      expect(path, '/path/hello/person');
+    });
+
     test(' "paths/one" from "paths/:id" where "paths" is parent', () {
       expect(
         Param.only(':id', parent: Path('paths')).define('one').path,
@@ -65,4 +71,10 @@ void main() {
       );
     });
   });
+}
+
+class _NestedPath extends Param<_NestedPath> {
+  _NestedPath() : super('path', 'id');
+
+  Param get name => Param.only('name', parent: this);
 }
